@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Management System</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="homePage" class="home-container">
+        <div class="banner">
+            <h1>Wecome to our parking site</h1>
+            <p></p>
+            <button class="btn" onclick="showSignUp()">Login or Signup here</button>
+        </div>
+    </div>
+
+    <!-- Sign Up Page -->
+    <div id="signUpPage" class="container hidden">
+        <h2>Sign Up</h2>
+        <form action="signup.php" method="POST">
+            <div class="input-group">
+                <label for="signupName">Full Name</label>
+                <input type="text" id="signupName" name="signupName" placeholder="Enter your full name" required>
+            </div>
+            <div class="input-group">
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="signupEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="signupPassword" placeholder="Enter your password" required>
+            </div>
+            <div class="input-group">
+                <label for="signupConfirmPassword">Confirm Password</label>
+                <input type="password" id="signupConfirmPassword" name="signupConfirmPassword" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+    </div>
+
+    <!-- Login Page -->
+    <div id="loginPage" class="container hidden">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign up here</a></p>
+    </div>
+    
+    
+    <script src="login.js"></script>
+</body>
+</html>
